@@ -1,0 +1,30 @@
+//swagger -url
+http://localhost:8080/swagger-ui/index.html#/user-controller/deleteUser
+
+//add user details
+curl --location 'http://localhost:8080/rest/user/register' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: Cookie_1=value; Cookie_1=value' \
+--data-raw '{
+        "firstName":"Ram",
+        "lastName":"RameshReddy",
+        "email":"emabi@gmail.com",
+        "contact":"9494184879",
+        "gender":"MALE",
+        "adharCard":"400391433639",
+        "password":"Passwosrd#@1234",
+        "address":{
+            "homeAddress":"marathahalli",
+            "officeAddress":"Richmond circle"
+
+        }
+}'
+
+
+//get user details
+
+curl --location 'http://localhost:8080/rest/user/get/1000' \
+--header 'Cookie: Cookie_1=value'
+
+
+
